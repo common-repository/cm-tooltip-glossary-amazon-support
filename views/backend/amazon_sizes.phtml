@@ -1,0 +1,26 @@
+<?php
+$amazonSizes = array(
+    "120x150" => "Size: 120 x 150",
+//    "120x240" => "Size: 120 x 240",
+//    "120x450" => "Size: 120 x 450",
+//    "120x600" => "Size: 120 x 600",
+//    "180x150" => "Size: 180 x 150",
+//    "300x250" => "Size: 300 x 250",
+//    "468x60"  => "Size: 468 x 60",
+//    "160x600" => "Size: 160 x 600",
+//    "468x240" => "Size: 468 x 240",
+//    "468x336" => "Size: 468 x 336",
+//    "728x90"  => "Size: 728 x 90",
+//    "200x200" => "Size: 200 x 200",
+);
+?>
+
+<select name="<?php echo $selectName ?>" >
+    <option value="0" <?php selected('0', $selectedValue); ?> >Please choose the size of widget</option>
+    <?php
+    foreach($amazonSizes as $sizeKey => $sizeLabel)
+    {
+        echo '<option value="' . $sizeKey . '" ' . selected($sizeKey, $selectedValue, true) . '>' . $sizeLabel . '</option>';
+    }
+    ?>
+</select>

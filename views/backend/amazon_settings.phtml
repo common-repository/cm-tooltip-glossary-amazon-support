@@ -1,0 +1,36 @@
+<div class="block">
+    <h3>API - Amazon</h3>
+    <p>Advertise Amazon products and earn money</p>
+    <table class="floated-form-table form-table">
+<!--        <tr valign="top">
+            <th scope="row" valign="middle" align="left" >Enable Amazon:</th>
+            <td><input type="checkbox" name="cmtt_tooltip3RD_AmazonEnabled" <?php checked(1, get_option('cmtt_tooltip3RD_AmazonEnabled')); ?> value="1" /></td>
+            <td colspan="2" class="cmtt_field_help_container">Enable Amazon products advertising<br><br></td>
+        </tr>-->
+        <tr valign="top">
+            <th scope="row">Amazon Associates ID:</th>
+            <td><input size="32" type="text" name="cmtt_tooltip3RD_AmazonApiKey" value="<?php echo get_option('cmtt_tooltip3RD_AmazonApiKey', ''); ?>" /></td>
+            <td colspan="2" class="cmtt_field_help_container">You need <a href="https://affiliate-program.amazon.com" target="_blank">Amazon Associates ID</a></td>
+        </tr>
+        <tr valign="top">
+            <th scope="row" valign="middle" align="left" ><?php _e('Product category', 'cm-tooltip-ecommerce'); ?>:</th>
+            <td>
+                <?php
+                $selectedCategory = get_option(CMTooltipGlossaryAmazonSupportAPI::AMAZON_CATEGORY_POST_KEY);
+                echo CMTooltipGlossaryAmazonSupportAPI::getCategoryListSelect(CMTooltipGlossaryAmazonSupportAPI::AMAZON_CATEGORY_POST_KEY, $selectedCategory);
+                ?>
+            </td>
+            <td colspan="2" class="cmtt_field_help_container"><?php _e('Please select the category', 'cm-tooltip-ecommerce'); ?></td>
+        </tr>
+<!--        <tr valign="top">
+            <th scope="row" valign="middle" align="left" ><?php _e('Widget size', 'cm-tooltip-ecommerce'); ?>:</th>
+            <td>
+                <?php
+                $selectedSize = get_option(CMTooltipGlossaryAmazonSupportAPI::AMAZON_SIZE_POST_KEY);
+                echo CMTooltipGlossaryAmazonSupportAPI::getSizeListSelect(CMTooltipGlossaryAmazonSupportAPI::AMAZON_SIZE_POST_KEY, $selectedSize);
+                ?>
+            </td>
+            <td colspan="2" class="cmtt_field_help_container"><?php _e('Please select the size of the widget', 'cm-tooltip-ecommerce'); ?></td>
+        </tr>-->
+    </table>
+</div>

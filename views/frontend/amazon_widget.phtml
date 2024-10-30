@@ -1,0 +1,17 @@
+<?php
+
+$widgetParameters = CMTooltipGlossaryAmazonSupportAPI::getParametersFromSize($widgetSize);
+
+$protocol = is_ssl() ? 'https://' : 'http://';
+$src = $protocol.'rcm-na.amazon-adsystem.com/e/cm';
+$src .= '?t='.$affiliateCode;
+$src .= '&o=1&p='.$widgetParameters['p'].'&l=st'.$widgetParameters['st'];
+$src .= '&mode='.$categoryKey;
+$src .= '&search='.$searchKey;
+$src .= '&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr';
+
+$widgetDimensions = explode('x', $widgetSize);
+?>
+
+<iframe src='<?php echo $src; ?>' marginwidth='0' marginheight='0' width='<?php echo $widgetDimensions[0]; ?>' height='<?php echo $widgetDimensions[1]; ?>' border='0' frameborder='0' style='border:none'; scrolling='no'>
+</iframe>

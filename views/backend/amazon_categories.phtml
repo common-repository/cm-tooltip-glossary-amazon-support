@@ -1,0 +1,55 @@
+<?php
+$amazonCategories = array(
+//    "amazontv"                   => "Amazon Instant Video",
+//    "apparel"                    => "Apparel &amp; Accessories",
+//    "appliances"                 => "Appliances",
+//    "arts-crafts"                => "Arts, Crafts &amp; Sewing",
+//    "automotive"                 => "Automotive",
+//    "baby"                       => "Baby",
+//    "beauty"                     => "Beauty",
+    "books"                      => "Books",
+//    "photo"                      => "Camera &amp; Photo",
+//    "wireless-phones"            => "Cell Phones &amp; Accessories",
+//    "classical"                  => "Classical Music",
+//    "pc-hardware"                => "Computers",
+//    "dvd"                        => "DVD",
+    "electronics"                => "Electronics",
+//    "entertainment-collectibles" => "Entertainment Collectibles",
+//    "gamedownloads"              => "Game Downloads",
+//    "gift-cards"                 => "Gift Cards",
+//    "grocery"                    => "Grocery &amp; Gourmet Food",
+    "garden"                     => "Home &amp; Garden",
+//    "hpc"                        => "Health &amp; Personal Care",
+//    "industrial"                 => "Industrial &amp; Scientific",
+//    "jewelry"                    => "Jewelry",
+//    "kindle"                     => "Kindle Store",
+    "kitchen"                    => "Kitchen &amp; Housewares",
+//    "magazines"                  => "Magazine Subscriptions",
+//    "universal"                  => "Miscellaneous",
+//    "digital-music"              => "MP3 Downloads",
+    "music"                      => "Music",
+//    "mi"                         => "Musical Instruments",
+//    "office-products"            => "Office Products",
+//    "pet-supplies"               => "Pet Supplies",
+//    "lawn-garden"                => "Patio, Lawn &amp; Garden",
+//    "shoes"                      => "Shoes",
+    "software"                   => "Software",
+//    "sports-collectibles"        => "Sports Collectibles",
+    "sporting"                   => "Sports &amp; Outdoors",
+//    "tools"                      => "Tools &amp; Hardware",
+//    "toys"                       => "Toys &amp; Games",
+//    "vhs"                        => "VHS",
+//    "videogames"                 => "Video Games",
+//    "watches"                    => "Watches",
+);
+?>
+
+<select name="<?php echo $selectName ?>" >
+    <option value="0" <?php selected('0', $selectedValue); ?> >Please choose a product line</option>
+    <?php
+    foreach($amazonCategories as $categoryKey => $categoryLabel)
+    {
+        echo '<option value="' . $categoryKey . '" ' . selected($categoryKey, $selectedValue, true) . '>'.$categoryLabel.'</option>';
+    }
+    ?>
+</select>
